@@ -77,7 +77,9 @@ cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extens
 
 ## Usage
 
-![usage](./assets/usage.gif)
+<p align="center">
+<img src="./assets/usage.gif" width="700" height="700">
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
