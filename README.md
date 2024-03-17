@@ -58,7 +58,7 @@ To get a local copy up and running follow these simple example steps.
 1. clone repo to local
 
 ```
-git@github.com:donaldturinglee/potplayer_subtitle_translate_deepl.git
+git clone https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl.git
 ```
 
 2. Copy file
@@ -77,7 +77,7 @@ cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extens
 
 ## Usage
 
-![](https://cdn.jsdelivr.net/gh/donaldturinglee/imgur@main/assets/imagesusage.gif)
+![usage](https://cdn.jsdelivr.net/gh/donaldturinglee/imgur@main/assets/imagesusage.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
