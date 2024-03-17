@@ -19,9 +19,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -80,7 +77,7 @@ cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extens
 
 ## Usage
 
-![](https://cdn.jsdelivr.net/gh/donaldturinglee/imgur@main/assets/imagesusage.gif)
+![image](https://cdn.jsdelivr.net/gh/donaldturinglee/imgur@main/assets/imagesusage.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
