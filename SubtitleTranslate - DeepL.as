@@ -155,15 +155,15 @@ string GetDesc() {
 }
 
 string GetLoginTitle() {
-        return "Input DeepL API key";
+        return "";
 }
 
 string GetLoginDesc() {
-        return "Input DeepL API key";
+        return "";
 }
 
 string GetUserText() {
-        return "API key:";
+        return "Server URL: ";
 }
 
 string GetPasswordText() {
