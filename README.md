@@ -46,12 +46,9 @@ This project is a plugin for PotPlayer that enables subtitle translation via Dee
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
-[DeepLX](https://github.com/OwO-Network/DeepLX)
+- [DeepLX](https://github.com/OwO-Network/DeepLX)
 
 ### Installation
 
