@@ -1,5 +1,5 @@
 /*
-        real time subtitle translate for PotPlayer using google API
+        real time subtitle translate for PotPlayer using DeepL
 */
 
 // void OnInitialize()
@@ -197,18 +197,32 @@ array<string> GetDstLangs() {
 
 string Translate(string Text, string &in SrcLang, string &in DstLang) {
 
+    
+
     string url = server_url;
 
-    string post_data = "{";
-    post_data += "\"text\": \"" + Text + "\", ";
-    post_data += "\"source_lang\": \"" + SrcLang + "\", ";
-    post_data += "\"target_lang\": \"" + DstLang + "\"";
-    post_data += "}";
+    Text.replace("\\","\\\\");
+    Text.replace("\"","\\\"");
+    Text.replace("\n","\\\\n");
+    Text.replace("\r","\\\\r");
+    Text.replace("\t","\\\\t");
+
+    dictionary dict = {
+        {'text', Text},
+        {'source_lang', SrcLang},
+        {'target_lang', DstLang}
+    };
+ 
+    string data = "{";
+    data += DictionaryToString(dict);
+    data += "}";
 
     string header = "Content-Type: application/json";
-
-    string text = HostUrlGetStringWithAPI(url, UserAgent, header, post_data);
+    
+    string text = HostUrlGetStringWithAPI(url, UserAgent, header, data);
+    
     string ret = JsonParse(text);
+    
     if (ret.length() > 0) {
         SrcLang = "UTF8";
         DstLang = "UTF8";
@@ -216,4 +230,17 @@ string Translate(string Text, string &in SrcLang, string &in DstLang) {
     }
 
     return ret;
+}
+
+string DictionaryToString(dictionary dict) {
+    array<string> keys = dict.getKeys();
+    uint length = keys.length();
+    array<string> pairs(length);
+    for (uint i = 0; i < length; i++) {
+        string key = keys[i];
+        string value = string(dict[key]);
+        pairs[i] = '"' + key + "\":\"" + value + '"';
+    }
+    string jsonString = join(pairs, ',');
+    return jsonString;
 }
