@@ -88,7 +88,7 @@ Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
@@ -106,8 +106,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Donald Lee - [@DonaldTuringLee](https://twitter.com/DonaldTuringLee)
+Twitter - [@Donald Lee](https://twitter.com/donaldturinglee)
 
-Project Link: [https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl](https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl)
+Project Link: [https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl](https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
