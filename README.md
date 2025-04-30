@@ -108,6 +108,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Twitter - [@Donald Lee](https://twitter.com/donaldturinglee)
 
-Project Link: [https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl](https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl)
+Project Link: [https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl](https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
