@@ -87,7 +87,7 @@ cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extens
 
 ## Usage
 
-[Potplayer Subtitle Translate DeepL User Guide](https://youtu.be/IyuGmyAgLGA)
+[Potplayer with DeepL guide](https://youtu.be/KdrY5-sVJUI)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
