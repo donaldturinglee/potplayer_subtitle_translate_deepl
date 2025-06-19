@@ -25,6 +25,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#configuration">Configuration</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -48,25 +49,37 @@ This project is a plugin for PotPlayer that enables subtitle translation via Dee
 
 ### Prerequisites
 
-- [DeepLX](https://github.com/OwO-Network/DeepLX)
+Before using this plugin, you need to obtain a DeepL API key:
+
+1. **DeepL API Account**
+   - Visit [DeepL API](https://www.deepl.com/pro-api) 
+   - Sign up for a free or paid account
+   - Free tier includes 500,000 characters/month
+   - Paid plans start from $6.99/month for higher usage limits
+
+2. **Get Your API Key**
+   - Log in to your DeepL account
+   - Go to your [Account Settings](https://www.deepl.com/account/summary)
+   - Navigate to the "API" tab
+   - Copy your **Authentication Key**
+
+3. **Note Your API Endpoint**
+   - **Free API**: `https://api-free.deepl.com`
+   - **Pro API**: `https://api.deepl.com`
 
 ### Installation
 
-1. clone repo to local
+1. Clone repo to local
 
-```
+```bash
 git clone https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl.git
 ```
 
-2. Copy file
+2. Copy files to PotPlayer extension directory
 
-```
+```bash
 cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extension/Subtitle/Translate/
 ```
-
-3. Set the server URL in the subtitles realtime translation configuration on PotPlayer
-
-4. Enjoy it
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,6 +90,7 @@ cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extens
 [Potplayer Subtitle Translate DeepL User Guide](https://youtu.be/IyuGmyAgLGA)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 ## Contributing

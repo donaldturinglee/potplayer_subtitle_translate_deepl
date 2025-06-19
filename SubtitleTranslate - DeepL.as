@@ -24,9 +24,15 @@ string JsonParse(string json) {
     string ret = "";
 
     if (Reader.parse(json, Root) && Root.isObject()) {
-        JsonValue translation = Root["data"];
-        if(translation.isString()) {
-            ret = translation.asString();
+        JsonValue translations = Root["translations"];
+        if (translations.isArray() && translations.size() > 0) {
+            JsonValue firstTranslation = translations[0];
+            if (firstTranslation.isObject()) {
+                JsonValue text = firstTranslation["text"];
+                if (text.isString()) {
+                    ret = text.asString();
+                }
+            }
         }
     }
     return ret;
@@ -163,29 +169,33 @@ string GetLoginDesc() {
 }
 
 string GetUserText() {
-        return "Server URL: ";
+        return "Base URL: ";
 }
 
 string GetPasswordText() {
-        return "";
+        return "API Key: ";
 }
 
-string server_url;
+string base_url, api_key;
 
 string ServerLogin(string User, string Pass) {
-        server_url = User;
-        if (server_url.empty()) server_url = "your_server_url";
+        base_url = User;
+        api_key = Pass;
+
+        if (base_url.empty()) base_url = "";
+        if (api_key.empty()) api_key = "";
         return "200 ok";
 }
 
 void ServerLogout() {
-        server_url = "";
+        base_url = "";
+        api_key = "";
 }
 
 array<string> GetSrcLangs() {
         array<string> ret = LangTable;
 
-        ret.insertAt(0, ""); // empty is auto
+        ret.insertAt(0, "");
         return ret;
 }
 
@@ -197,29 +207,26 @@ array<string> GetDstLangs() {
 
 string Translate(string Text, string &in SrcLang, string &in DstLang) {
 
+    string url = base_url + "/v2/translate";
     
-
-    string url = server_url;
-
     Text.replace("\\","\\\\");
     Text.replace("\"","\\\"");
     Text.replace("\n","\\\\n");
     Text.replace("\r","\\\\r");
     Text.replace("\t","\\\\t");
 
-    dictionary dict = {
-        {'text', Text},
-        {'source_lang', SrcLang},
-        {'target_lang', DstLang}
-    };
- 
     string data = "{";
-    data += DictionaryToString(dict);
+    data += "\"text\":[\"" + Text + "\"],";
+    data += "\"target_lang\":\"" + DstLang + "\"";
+    if (!SrcLang.empty()) {
+        data += ",\"source_lang\":\"" + SrcLang + "\"";
+    }
     data += "}";
-
-    string header = "Content-Type: application/json";
     
-    string text = HostUrlGetStringWithAPI(url, UserAgent, header, data);
+    string headers = "Authorization: DeepL-Auth-Key "+ api_key + "\r\n";
+    headers += "Content-Type: application/json";
+    
+    string text = HostUrlGetStringWithAPI(url, UserAgent, headers, data);
     
     string ret = JsonParse(text);
     
