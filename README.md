@@ -7,9 +7,9 @@
     <br />
     <a href="#usage">View Demo</a>
     &emsp;
-    <a href="https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl/issues">Report Bug</a>
+    <a href="https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl/issues">Report Bug</a>
     &emsp;
-    <a href="https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl/issues">Request Feature</a>
+    <a href="https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl/issues">Request Feature</a>
   </p>
 </div>
 
@@ -72,13 +72,13 @@ Before using this plugin, you need to obtain a DeepL API key:
 1. Clone repo to local
 
 ```bash
-git clone https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl.git
+git clone https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl.git
 ```
 
 2. Copy files to PotPlayer extension directory
 
 ```bash
-cp potplayer_subtitle_translate_deepl/*.{as,ico} your_directory/PotPlayer/Extension/Subtitle/Translate/
+cp potplayer-subtitle-translate-deepl/*.{as,ico} your_directory/PotPlayer/Extension/Subtitle/Translate/
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -122,6 +122,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Twitter - [@Donald Lee](https://twitter.com/donaldturinglee)
 
-Project Link: [https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl](https://github.com/donaldturinglee/potplayer_subtitle_translate_deepl)
+Project Link: [https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl](https://github.com/donaldturinglee/potplayer-subtitle-translate-deepl)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
